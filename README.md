@@ -1,0 +1,2 @@
+# egyenlet
+egyenlet calc
