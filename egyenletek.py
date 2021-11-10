@@ -1,6 +1,21 @@
 import sympy as sym
 
 def elso():
+    while True:
+        try:
+            a=float(input("Szám1:"))
+            b=float(input("Szám2:"))
+            break
+
+        except ValueError:
+            print("Hibás érték")
+
+    x=symbols('x')
+    expr = x+a+b
+    sol = solve(expr)
+
+    sol
+    print(sol)
     
 def masod():
     print("teszt1")
