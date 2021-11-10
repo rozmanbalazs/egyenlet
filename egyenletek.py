@@ -15,7 +15,8 @@ def elso():
     sol = solve(expr)
 
     sol
-    print(sol)
+    final = "{:.2f}".format(sol)
+    print("x = {final}")
     
 def masod():
     print("teszt1")
