@@ -11,7 +11,7 @@ def elso():
             print("Hibás érték")
 
     x=symbols('x')
-    expr = x+a+b
+    expr = x+(a+b)*-1
     sol = solve(expr)
 
     sol
