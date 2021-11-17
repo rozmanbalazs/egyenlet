@@ -1,5 +1,5 @@
 import cmath
-from sympy import symbols, solve
+from gekko import GEKKO
 
 def elso():
     print("---Elsőfokút választottál---")
@@ -12,12 +12,12 @@ def elso():
         except ValueError:
             print("Hibás Érték")
 
-    x=symbols('x')
-    expr = x+(a+b)*-1
-    sol = solve(expr)
+    m = GEKKO()
+    x = m.Var()
 
-    sol
-    print("x = "+str(sol))
+    m.Equation(a*x+b==0)
+    m.solve(disp=False)
+    print(f"az X értéke = {x.value}")
     
 def masod():
     print("---Másodfokút választottál---")
