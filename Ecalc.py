@@ -1,5 +1,5 @@
 import cmath
-#from sympy import symbols, solve
+from sympy import symbols, solve
 
 def elso():
     print("---Elsőfokút választottál---")
