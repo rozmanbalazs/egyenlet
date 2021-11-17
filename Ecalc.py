@@ -7,8 +7,13 @@ def elso():
         try:
             a=float(input("Szám1:"))
             b=float(input("Szám2:"))
-            break
-
+            
+            if a != 0:
+                break
+            
+            if a == 0:
+                raise ValueError
+                
         except ValueError:
             print("Hibás Érték")
 
@@ -26,17 +31,24 @@ def masod():
             a = float(input("Hány másodfokú x van? "))
             b = float(input("Hány x van? "))
             c = float(input("Mennyi a szám? "))
-            break
-        
+            
+            
+            if a == 0 or b == 0:
+                raise ValueError
+            
+            if a != 0 or b != 0:
+                break
+
+
         except ValueError:
             print("Hibás Érték")
             
-    d = (b**2) - (4*a*c)
+        d = (b**2) - (4*a*c)
 
-    sol1 = (-b-cmath.sqrt(d))/(2*a)
-    sol2 = (-b+cmath.sqrt(d))/(2*a)
-
-    print('A megoldások a következők: {:.4f} és {:.4f}'.format(sol1,sol2))
+        sol1 = (-b-cmath.sqrt(d))/(2*a)
+        sol2 = (-b+cmath.sqrt(d))/(2*a)
+            
+        print('A megoldások a következők: {:.4f} és {:.4f}'.format(sol1,sol2))
 
 while True:
     try:
