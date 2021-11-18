@@ -5,6 +5,7 @@ def elso():
     print("---Elsőfokút választottál---")
     while True:
         try:
+            print("Az egyenlet legyen 0-val egyenlő")
             a=float(input("Szám1:"))
             b=float(input("Szám2:"))
             
