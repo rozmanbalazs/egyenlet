@@ -11,9 +11,11 @@ def elso():
             
             if a != 0:
                 break
+                    
+            elif a == 0.0 and b == 0.0:
+                print("minden X megoldás.")
+                raise SystemExit
             
-            if a == 0:
-                raise ValueError
                 
         except ValueError:
             print("Hibás Érték")
@@ -33,23 +35,25 @@ def masod():
             b = float(input("Hány x van? "))
             c = float(input("Mennyi a szám? "))
             
+            if a == 0.0:
+                elso()
+                break
             
-            if a == 0 or b == 0:
+            elif b == 0.0:
                 raise ValueError
             
-            if a != 0 or b != 0:
+            elif a != 0 or b != 0:
                 break
+                
+            elif b == 0:
+                m.Equation(a*x+b==0)
+                m.solve(disp=False)
+
 
 
         except ValueError:
             print("Hibás Érték")
             
-        d = (b**2) - (4*a*c)
-
-        sol1 = (-b-cmath.sqrt(d))/(2*a)
-        sol2 = (-b+cmath.sqrt(d))/(2*a)
-            
-        print('A megoldások a következők: {:.4f} és {:.4f}'.format(sol1,sol2))
 
 while True:
     try:
